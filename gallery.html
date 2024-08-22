@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Syahrizaldev">
+	<title>ASPEN HOMES | Our Gallery</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="reset.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.3/css/ionicons.min.css">
+</head>
+
+<body>
+	<!-- Section: Header -->
+	<header class="header" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06); background-color: #fff;">
+		<div class="container">
+			<div class="wrapper">
+				<div class="header-item-left">
+					<a href="index.html" class="brand">
+						<img src="images/aspen-homes-logo-full.png" alt="">
+					</a>
+				</div>
+				<!-- Section: Navbar Menu -->
+				<div class="header-item-center">
+					<div class="overlay"></div>
+					<nav class="menu">
+						<div class="menu-mobile-header">
+							<button type="button" class="menu-mobile-arrow"><i
+									class="ion ion-ios-arrow-back"></i></button>
+							<div class="menu-mobile-title"></div>
+							<button type="button" class="menu-mobile-close"><i class="ion ion-ios-close"></i></button>
+						</div>
+						<ul class="menu-section">
+							<li class="menu-item-has-children">
+								<a href="#">How It Works <i class="ion ion-ios-arrow-down"></i></a>
+								<div class="menu-subs menu-mega menu-column-4">
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-details.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">The Details</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-designers.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Designers</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-pricing.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Style Quiz</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-reviews.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Reviews</h4>
+										</a>
+									</div>
+								</div>
+							</li>
+							
+							<li><a href="#">Blog</a></li>
+							<li class="menu-item-has-children">
+								<a href="#">Portfolio <i class="ion ion-ios-arrow-down"></i></a>
+								<div class="menu-subs menu-mega menu-column-4">
+									<div class="list-item">
+										<h4 class="title">By Room</h4>
+										<ul>
+											<li><a href="#">Living Room</a></li>
+											<li><a href="#">Dining Room</a></li>
+											<li><a href="#">Bedroom</a></li>
+											<li><a href="#">Home Office</a></li>
+											<li><a href="#">Nursery</a></li>
+											<li><a href="#">Patio</a></li>
+											<li><a href="#">Entry Way</a></li>
+										</ul>
+									</div>
+									<div class="list-item">
+										<h4 class="title">By Style</h4>
+										<ul>
+											<li><a href="#">Midcentury Modern</a></li>
+											<li><a href="#">Bohemian</a></li>
+											<li><a href="#">Farmhouse</a></li>
+											<li><a href="#">Traditional</a></li>
+											<li><a href="#">Coastal</a></li>
+											<li><a href="#">Scandinavian</a></li>
+											<li><a href="#">Glam</a></li>
+										</ul>
+										
+									</div>
+									<div class="list-item">
+										<h4 class="title">By Location</h4>
+										<ul>
+											<li><a href="#">Austin</a></li>
+											<li><a href="#">Boston</a></li>
+											<li><a href="#">Charlotte</a></li>
+											<li><a href="#">Chicago</a></li>
+											<li><a href="#">Dallas</a></li>
+											<li><a href="#">Denver</a></li>
+											<li><a href="#">Houston</a></li>
+											<li><a href="#">Los Angeles</a></li>
+											<li><a href="#">New York</a></li>
+										</ul>
+									</div>
+									<div class="list-item">
+										<img src="https://www.jqueryscript.net/dummy/5.jpg" class="responsive"
+											alt="Shop Product">
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Gift Cards</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-item-right">
+					<a href="#" class="menu-icon"><i class="ion ion-md-search"></i></a>
+					<button type="button" class="menu-mobile-trigger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+
+    <!-- Gallery Item Section -->
+    <section class="gallery-item" style="margin: 200px 0px 100px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div id="gallery-item-container">
+                        <!-- The gallery item image and content will be loaded here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to dynamically load gallery item based on URL parameters
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the URL parameter 'image'
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageId = urlParams.get('image');
+
+            // Define gallery items (you can replace this with dynamic data if needed)
+            const galleryItems = {
+                '1': {
+                    src: 'images/gallery/new-yark.jpg',
+                    alt: 'Photography: Werner Straube',
+                    description: 'This project graced the front cover of House Beautiful’s March 2020 issue. A newly constructed manse, the CDJA team played a collaborative role with both the interior architecture and design process. The firm’s primary mandate was to create a series of spaces that projected etherealness and light, and to balance the creatively diverse visions of the two homeowners: the husband preferred clean lines and modernity, while the wife loved vibrant jewel tones and touches of traditionalism. Dramatically patterned marble and quartz selections were employed to make bold statements as organic art. Wood and metal finishes were mixed unapologetically throughout each room, which tied seamlessly with an energetic color palette of emerald, navy, chocolate, honey, and white. The result is a project that is equal parts midcentury modern and neoclassical—but effortlessly timeless.'
+                },
+                '2': {
+                    src: 'images/gallery/6bloom_resized.jpg',
+                    alt: 'Photography: Werner Straube',
+                    description: 'Published in the May 2016 issue of Traditional Home Magazine, this 15,000 sq. ft. Michigan historic mansion underwent a gut renovation with CDJA guiding the entire development of the interior and exterior design. Much of the home’s original American Colonial Revival-style interior architecture was retained, duplicated or restored with care. Taking cues from the fashion runway stars like Elie Saab and Valentino, Jenkins presented the clients with a combination of bold hues and modern choices juxtaposed against a traditional backdrop. For example, a pair of midnight-blue Jimmy Choos provided the inspiration for the palette’s sapphire tones and the kitchen’s La Cornue range. Interiors were reenergized using other jewel tones and vibrant saturated colors like emerald and citron. The principal bedroom is a wonderland of fresh hues, thanks to a bold wallcovering selection.'
+                },
+                '3': {
+                    src: 'images/gallery/7frank_resized.jpg',
+                    alt: 'Photography: Werner Straube',
+                    description: 'This project was featured in the October 2017 issue of Traditional Home Magazine and received front cover honors. CDJA partnered with a young family to build a new home on a lush, heavily wooded property in Metro-Detroit, Michigan. Classic elements, such as paneled walls, elegant millwork, fine furniture, floral fabrics, and patterned wallcoverings, set the stage to create something at once timeless and new. To sneak in extra seating, CDJA flanked the living room’s fireplace with conversation nooks, their green velvet panels set in harlequin style and “tufted” with a single button. To mesh with the family’s lifestyle, Jenkins opted to forgo a formal dining room in favor of a casual eating spot that links the living area, kitchen, and patio. Repeated design elements—like three caged crystal chandeliers—unifies the spaces. As is standard with interiors created by the firm, the Parisian fashion runway also influenced the design concepts: for example, menswear patterns and rich colors in the study form a fitting backdrop for the husband’s sports collectibles—including his prized Babe Ruth sculpture.'
+                },
+                '4': {
+                    src: 'images/gallery/230307_CDJA_Cohasset_0202-1.jpg',
+                    alt: 'Photography: Andrew Frasz',
+                    description: 'This project, based in Cohasset, Massachusetts, garnered Corey Damen Jenkins & Associates its second front cover story with House Beautiful Magazine. The original structure was an old sea captain’s home built in the 1850s. Throughout the decades that followed, the house’s imprint was expanded and when CDJA was hired to oversee its renovation, it had already been extended to over 5,000 square feet. Corey encouraged his clients to retain many of the home’s original architectural bones, including moldings, interior doors, and the kitchen’s bead board ceiling and rustic beams."<br> <br>" Aiming to bring the home into the 21st Century, while also honoring his clients’ modern and fashion-forward sensibilities, Corey deftly mixed antiques from the wife’s inherited estate with the husband’s desires for clean-lined silhouettes. Materialities were put to work in inspiring ways. For example, wallpaper was boldly used throughout the first floor: the Garden Room’s walls were gift-wrapped with a hand painted scenic mural from Europe, while similarly bold statements were made on the ceilings of the formal dining room and Speakeasy. Fabric passementerie, in varying widths, was also utilized in inspiring ways, as on the walls in the Front Hall. The ramped kitchen is a tour de force with its organic “panda” marble island and statement-making light fixture selections, while the dining room unapologetically embraces moodier tones with dark green lacquered walls, flocked leopard print wall-coverings, and antique chippendale chairs paired with a modern burl wood table. In the end, this historic home was given a fresh remix for a young family with their eyes on the future.'
+                },
+                '5': {
+                    src: 'images/gallery/nyc-office.jpg',
+                    alt: 'Photography: Andrew Frasz',
+                    description: 'Featured by Architectural Digest as “an enviably chic atelier”, this bespoke and glamorous office space balances luxury with productivity while ultimately serving up the ideal environment for creativity to flourish. The initial visual impact to be welcoming, ethereal, and elegant. It was highly important for the team, clients and visitors to enjoy coming here every day. Large skylights allow copious amounts of sunlight to pour down into the entry hall and reception area. To capitalize on this effect, a bold, botanical print from Schumacher was selected for the walls. The furniture is a medley of designs for Hancock & Moore and Maitland-Smith mixed in with some antiquity (i.e. the Belgian dining table in the Reception area is a late 19th Century auction find). The portraits on the walls are from the “Mouths Wide Open” collection for Leftbank Art."<br><br>" The intent is a kind of inspiration born of Jenkins’s accomplishments and optimism and symbolized by those vast views that convinced him the space should be the firm’s new home.” -Architectural Digest, January 2023.'
+                },
+                '6': {
+                    src: 'images/gallery/4ncr_resized-scaled.jpg',
+                    alt: 'Photography: George Ross Photography',
+                    description: 'CDJA partnered with homeowners in New Canaan, Connecticut for the renovation of this 12,000-plus sq. ft. residence. Since the couple had purchased high end furniture in the early 1990s (and in the spirit of being environmentally responsible), the team decided to reupholster and refinish over three dozen existing frames. Next, the firm rearranged the couple’s previously owned furnishings into updated floor plans alongside new furniture purchases. Jenkins also “shopped” the homeowners’ basement and attic, where he culled great old pieces that deserved a second life. A gilt trumeau mirror crowns a vintage sideboard; gilt-framed art pairs with a graceful demilune table. The homeowners and CDJA also made bold choices with paint and wallcoverings. For example, the dining room’s walls are lacquered to near mirror-like levels of reflection, interior doors are painted a dark purple hue, and statement wallpapers choices are at play in the foyer, powder rooms, and family room. As is customary for Corey Damen Jenkins & Associates, the finishing touches in each room were selected to highlight the personalities, interests, and hobbies of the clients. In this case, equestrian-themed elements are judiciously woven into the design in honor of the Lady of the house. This home was published nationally in the July 2020 Issue of Traditional Home.'
+                },
+                '7': {
+                    src: 'images/gallery/1new_resized-scaled.jpg',
+                    alt: 'Photography: Marco Ricca Photography',
+                    description: 'One of Corey Damen Jenkins & Associates’ most celebrated designs, The Ladies Library (officially titled “To The Lady Of The House, With Love”) was a headlining space at the 2019 Kips Bay Decorators Showhouse. Although it was coined “The Gentleman’s Study” on the historic mansion’s original floorplans, Corey Damen Jenkins sought to redesign the library for a new mission: to become a command center for a sophisticated woman running a business and her household. Inspired by the ancient Hanging Gardens of Babylon, the remixed space features a soaring, 17-foot ceiling covered in a botanical motif with black branches and persimmon blossoms. The walls and moldings are painted a soft, champagne hue, while furnishings and accessories are mixed and matched from various periods and styles, including Louis XVI, Vladimir Kagan and more. Bookcase shelves are wrapped in a textured grass cloth, and the showstopping, crystal-encrusted chandelier is a late 19 th century antique find. The windows are dressed in Jenkins’ trademark peplum draperies, and the Art Deco-style grates are original to the mansion. The fireplace and goldleaf piping on the mantel were restored during the renovation.'
+                },
+                '8': {
+                    src: 'images/gallery/20221102_CDJ_185.jpg',
+                    alt: 'Photography: Brian Bieder Photography',
+                    description: 'Corey Damen Jenkins and Associates was a headlining interior design firm for the FLOWER Magazine Inaugural Showhouse in Atlanta, Georgia in November 2022. Corey’s three spaces, the Morning Bar, the Wine Room, and the Secret Speakeasy, were among the highlights of the venue with visitors donning the speakeasy as the “belle of the ball”. Corey sought to create an underground garden that embraced elegant and fashion-forward aesthetics in a space that flipped the narrative on “man caves” by designing the space with women’s relaxation top of mind. These spaces were situated in the lower level of the house where no windows were to be found; Corey’s challenge was to bring the beauty of the outdoors…indoors. The light and ethereal palette of blush pinks, mint and celadon greens, black, white, and gold mixed with reflective finishes and surfaces, great artwork, traditional and antique pieces lit with stunningly modern light fixtures, all surrounded by beautiful organic motifs brought this downstairs haven to life as if it were truly in the great wide open. '
+                },
+                '9': {
+                    src: 'images/gallery/16pr_resized-scaled.jpg',
+                    alt: 'Photography: Werner Straube',
+                    description: 'French-inspired architecture and Moroccan motifs coalesce to give a newly built Michigan home a worldly sensibility. Luxurious finishes and layers of pattern reflect the vision of these homeowners who turned to Corey Damen Jenkins & Associates to create something tailored with neoclassical hallmarks. The firm meticulously designed all the custom millwork and moldings to introduce the feeling of a French salon. The detailed craftsmanship belies the age of the home, fooling visitors into thinking it is much older than it is. Adding to the Parisian flair is a recurring color scheme of black and white mixed with Bohemian-themed fabrics, saturated colors, bold artworks, and unique textile combinations. Tile, a pillar of Eastern design, also plays a big visual role as seen with the kitchen island, principal bath, and sunroom.'
+                },
+                '10': {
+                    src: 'images/gallery/12nr_resized.jpg',
+                    alt: 'Photography: David Duncan Livingston',
+                    description: 'When the owners of a French country-style house in Southeastern Michigan had a change of circumstances, they turned to Corey Damen Jenkins & Associates for a new vision in their home’s interiors. With children grown up and moved out, the empty nesters wanted to create something more daring with their design and decoration. The only challenge was striking the delicate balance between the husband, who was more contemporary, and his wife, who didn’t want to abandon traditional aesthetics altogether. In the living room, a modern Chesterfield sofa mingles with an antique table, while a vintage discus, previously used by the husband’s great-great grandfather—a former U.S. Olympian athlete—finds a new role. Shapely chairs create their own distinct silhouettes. Empirical-styled sconces dripping with crystal and metal accoutrement line the walls. Picture frame molding is painted in black and white for an unexpected take on a classic that resembles the stitching on a suit or dress. A goldenrod velvet sofa takes centerstage in the family room, while a mirrored bistro table gleams in the nearby breakfast nook. All of the spaces are unified with a neutral color palette of black, white, and gray with varied accents and layered patterned play.'
+                }
+                // Add more items as needed
+            };
+
+            // Load the gallery item based on the imageId
+            const item = galleryItems[imageId];
+            if (item) {
+                const container = document.getElementById('gallery-item-container');
+                container.innerHTML = `
+                    <img src="${item.src}" alt="${item.alt}" class="img-fluid mb-4">
+                    <h2 style="font-size:16px; color:#606060; line-height: 25px; word-spacing: 3px;">${item.alt}</h2>
+                    <p style="font-size:12px; color:#606060; line-height: 25px; word-spacing: 3px;">${item.description}</p>
+                `;
+            } else {
+                // Handle case where the imageId is not found
+                document.getElementById('gallery-item-container').innerHTML = '<p>Gallery item not found.</p>';
+            }
+        });
+    </script>
+
+<footer class="footer-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-12 mb-4">
+                <h4 class="mb-4">Contact Us</h4>
+                <form>
+                    <div class="row my-3">
+                            <div class="form-group col-md-3">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="company">Company Name (Optional)</label>
+                                <input type="text" class="form-control" id="company" placeholder="Company Name">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="email">Email (Optional)</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="mobile">Mobile *</label>
+                                <input type="tel" class="form-control" id="mobile" placeholder="Your Mobile Number" required>
+                            </div>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="description">Description *</label>
+                        <textarea class="form-control" id="description" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <!-- Copyright Section -->
+            <div class="col-12 text-center">
+                <span>&copy; 2024 Your Aspen Homes. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+
+</html>

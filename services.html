@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Syahrizaldev">
+	<title>ASPEN HOMES | Our Services</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="reset.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.6.3/css/ionicons.min.css">
+</head>
+
+<body>
+	<!-- Section: Header -->
+	<header class="header" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06); background-color: #fff;">
+		<div class="container">
+			<div class="wrapper">
+				<div class="header-item-left">
+					<a href="index.html" class="brand">
+						<img src="images/aspen-homes-logo-full.png" alt="">
+					</a>
+				</div>
+				<!-- Section: Navbar Menu -->
+				<div class="header-item-center">
+					<div class="overlay"></div>
+					<nav class="menu">
+						<div class="menu-mobile-header">
+							<button type="button" class="menu-mobile-arrow"><i
+									class="ion ion-ios-arrow-back"></i></button>
+							<div class="menu-mobile-title"></div>
+							<button type="button" class="menu-mobile-close"><i class="ion ion-ios-close"></i></button>
+						</div>
+						<ul class="menu-section">
+							<li class="menu-item-has-children">
+								<a href="#">How It Works <i class="ion ion-ios-arrow-down"></i></a>
+								<div class="menu-subs menu-mega menu-column-4">
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-details.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">The Details</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-designers.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Designers</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-pricing.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Style Quiz</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="images/header-reviews.webp" class="responsive"
+												alt="New Product">
+											<h4 class="title">Reviews</h4>
+										</a>
+									</div>
+								</div>
+							</li>
+							
+							<li><a href="#">Blog</a></li>
+							<li class="menu-item-has-children">
+								<a href="#">Portfolio <i class="ion ion-ios-arrow-down"></i></a>
+								<div class="menu-subs menu-mega menu-column-4">
+									<div class="list-item">
+										<h4 class="title">By Room</h4>
+										<ul>
+											<li><a href="#">Living Room</a></li>
+											<li><a href="#">Dining Room</a></li>
+											<li><a href="#">Bedroom</a></li>
+											<li><a href="#">Home Office</a></li>
+											<li><a href="#">Nursery</a></li>
+											<li><a href="#">Patio</a></li>
+											<li><a href="#">Entry Way</a></li>
+										</ul>
+									</div>
+									<div class="list-item">
+										<h4 class="title">By Style</h4>
+										<ul>
+											<li><a href="#">Midcentury Modern</a></li>
+											<li><a href="#">Bohemian</a></li>
+											<li><a href="#">Farmhouse</a></li>
+											<li><a href="#">Traditional</a></li>
+											<li><a href="#">Coastal</a></li>
+											<li><a href="#">Scandinavian</a></li>
+											<li><a href="#">Glam</a></li>
+										</ul>
+										
+									</div>
+									<div class="list-item">
+										<h4 class="title">By Location</h4>
+										<ul>
+											<li><a href="#">Austin</a></li>
+											<li><a href="#">Boston</a></li>
+											<li><a href="#">Charlotte</a></li>
+											<li><a href="#">Chicago</a></li>
+											<li><a href="#">Dallas</a></li>
+											<li><a href="#">Denver</a></li>
+											<li><a href="#">Houston</a></li>
+											<li><a href="#">Los Angeles</a></li>
+											<li><a href="#">New York</a></li>
+										</ul>
+									</div>
+									<div class="list-item">
+										<img src="https://www.jqueryscript.net/dummy/5.jpg" class="responsive"
+											alt="Shop Product">
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Gift Cards</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-item-right">
+					<a href="#" class="menu-icon"><i class="ion ion-md-search"></i></a>
+					<button type="button" class="menu-mobile-trigger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+    <!-- Gallery Item Section -->
+    <section class="services-item" style="margin: 200px 0px 100px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div id="services-item-container">
+                        <!-- The gallery item image and content will be loaded here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to dynamically load gallery item based on URL parameters
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the URL parameter 'image'
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageId = urlParams.get('services');
+
+            // Define gallery items (you can replace this with dynamic data if needed)
+            const servicesItems = {
+                '1': {
+                    src: 'images/gallery/new-yark.jpg',
+                    alt: 'Residential interior designer',
+                    description: 'This project graced the front cover of House Beautiful’s March 2020 issue. A newly constructed manse, the CDJA team played a collaborative role with both the interior architecture and design process. The firm’s primary mandate was to create a series of spaces that projected etherealness and light, and to balance the creatively diverse visions of the two homeowners: the husband preferred clean lines and modernity, while the wife loved vibrant jewel tones and touches of traditionalism. Dramatically patterned marble and quartz selections were employed to make bold statements as organic art. Wood and metal finishes were mixed unapologetically throughout each room, which tied seamlessly with an energetic color palette of emerald, navy, chocolate, honey, and white. The result is a project that is equal parts midcentury modern and neoclassical—but effortlessly timeless.'
+                },
+                '2': {
+                    src: 'images/gallery/6bloom_resized.jpg',
+                    alt: 'Commercial interior designer',
+                    description: 'Published in the May 2016 issue of Traditional Home Magazine, this 15,000 sq. ft. Michigan historic mansion underwent a gut renovation with CDJA guiding the entire development of the interior and exterior design. Much of the home’s original American Colonial Revival-style interior architecture was retained, duplicated or restored with care. Taking cues from the fashion runway stars like Elie Saab and Valentino, Jenkins presented the clients with a combination of bold hues and modern choices juxtaposed against a traditional backdrop. For example, a pair of midnight-blue Jimmy Choos provided the inspiration for the palette’s sapphire tones and the kitchen’s La Cornue range. Interiors were reenergized using other jewel tones and vibrant saturated colors like emerald and citron. The principal bedroom is a wonderland of fresh hues, thanks to a bold wallcovering selection.'
+                },
+                '3': {
+                    src: 'images/gallery/7frank_resized.jpg',
+                    alt: 'Space planning',
+                    description: 'This project was featured in the October 2017 issue of Traditional Home Magazine and received front cover honors. CDJA partnered with a young family to build a new home on a lush, heavily wooded property in Metro-Detroit, Michigan. Classic elements, such as paneled walls, elegant millwork, fine furniture, floral fabrics, and patterned wallcoverings, set the stage to create something at once timeless and new. To sneak in extra seating, CDJA flanked the living room’s fireplace with conversation nooks, their green velvet panels set in harlequin style and “tufted” with a single button. To mesh with the family’s lifestyle, Jenkins opted to forgo a formal dining room in favor of a casual eating spot that links the living area, kitchen, and patio. Repeated design elements—like three caged crystal chandeliers—unifies the spaces. As is standard with interiors created by the firm, the Parisian fashion runway also influenced the design concepts: for example, menswear patterns and rich colors in the study form a fitting backdrop for the husband’s sports collectibles—including his prized Babe Ruth sculpture.'
+                }
+                // Add more items as needed
+            };
+
+            // Load the gallery item based on the imageId
+            const item = servicesItems[imageId];
+            if (item) {
+                const container = document.getElementById('services-item-container');
+                container.innerHTML = `
+                    <img src="${item.src}" alt="${item.alt}" class="img-fluid mb-4" style="height:400px; width:100%;">
+                    <h2 style="font-size:16px; color:#606060; line-height: 25px; word-spacing: 3px;">${item.alt}</h2>
+                    <p style="font-size:12px; color:#606060; line-height: 25px; word-spacing: 3px;">${item.description}</p>
+                `;
+            } else {
+                // Handle case where the imageId is not found
+                document.getElementById('services-item-container').innerHTML = '<p>Services item not found.</p>';
+            }
+        });
+    </script>
+
+<footer class="footer-section py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-12 mb-4">
+                <h4 class="mb-4">Contact Us</h4>
+                <form>
+                    <div class="row my-3">
+                            <div class="form-group col-md-3">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="company">Company Name (Optional)</label>
+                                <input type="text" class="form-control" id="company" placeholder="Company Name">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="email">Email (Optional)</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="mobile">Mobile *</label>
+                                <input type="tel" class="form-control" id="mobile" placeholder="Your Mobile Number" required>
+                            </div>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="description">Description *</label>
+                        <textarea class="form-control" id="description" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <!-- Copyright Section -->
+            <div class="col-12 text-center">
+                <span>&copy; 2024 Your Aspen Homes. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+
+</html>
